@@ -22,8 +22,8 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
-    @DisplayName("Неверные данные")
-    public void incorrectDataTest() {
+    @DisplayName("Невалидные данные")
+    public void invalidDataTest() {
         Faker faker = new Faker();
         LoginStep loginStep = new LoginStep();
         loginStep.fillFormAndSubmit(faker.internet().emailAddress(), faker.internet().password());

@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -15,7 +14,7 @@ public class LoginApiTest {
     }
 
     @Test
-    @DisplayName("Авторизация c невалидным логином")
+    @DisplayName("Авторизация c невалидными данными")
     public void authorizationWithInvalidLoginTest() {
         Faker faker = new Faker();
         String login = faker.internet().emailAddress();
