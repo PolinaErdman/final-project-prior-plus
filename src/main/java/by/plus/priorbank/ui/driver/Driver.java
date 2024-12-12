@@ -2,7 +2,6 @@ package by.plus.priorbank.ui.driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class Driver {
