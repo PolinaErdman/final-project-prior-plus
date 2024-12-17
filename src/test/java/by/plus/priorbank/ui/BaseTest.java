@@ -7,6 +7,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class BaseTest {
     private static final Logger logger = LogManager.getLogger();
 
@@ -14,6 +16,8 @@ public class BaseTest {
     public void  setUp() {
         String url = "https://plus.priorbank.by/";
         WebDriver driver = Driver.getDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
+        driver.manage().window().maximize();
         driver.get(url);
         logger.info("Открываем главную страницу " + url);
     }
