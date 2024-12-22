@@ -1,10 +1,8 @@
 package by.plus.priorbank.api;
 
 import io.restassured.response.Response;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import static io.restassured.RestAssured.given;
 
 public class BaseApi {
