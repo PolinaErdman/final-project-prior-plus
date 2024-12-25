@@ -1,4 +1,4 @@
-package by.plus.priorbank.ui.pages;
+package by.plus.priorbank.ui.pages.login;
 
 public class LoginMessages {
     public static final String NO_DATA = "Поле должно иметь значение";
