@@ -35,7 +35,7 @@ polinaerdman@gmail.com
    
    BaseTest - содержит предварительные настройки запуска api-тестов
    
-   LoginApiTest - содержит api тесты формы логина
+   LoginTest - содержит api тесты формы логина
    
 2. Пакет ui:
    
@@ -47,7 +47,7 @@ polinaerdman@gmail.com
 
 **Реализованные проверки**
 
-   api login
+api login
    
    Авторизация c невалидными данными
    
@@ -57,9 +57,17 @@ polinaerdman@gmail.com
    
    Авторизация c пустым password
    
-  ui login
+ui login
+
+   Авторизация c невалидными данными
+   
+   Авторизация c пустым email и password
+   
+   Авторизация c пустым email
+   
+   Авторизация c пустым password
   
-  ui search
+ui search
   
   Открытие каталога
   
