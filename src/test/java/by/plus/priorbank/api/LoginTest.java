@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class LoginApiTest extends BaseTest{
+public class LoginTest extends BaseTest{
 
     @Test
     @DisplayName("Авторизация c невалидными данными")
