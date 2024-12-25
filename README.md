@@ -29,11 +29,11 @@ polinaerdman@gmail.com
    SearchTest - содержит ui тесты функционала поиска по каталогу
 
 Реализованные проверки
-  api login
-  Авторизация c невалидными данными
-  Авторизация c пустым email и password
-  Авторизация c пустым email
-  Авторизация c пустым password
+   api login
+   Авторизация c невалидными данными
+   Авторизация c пустым email и password
+   Авторизация c пустым email
+   Авторизация c пустым password
   ui login
   
   ui search
