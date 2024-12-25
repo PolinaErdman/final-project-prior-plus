@@ -1,4 +1,4 @@
-package by.plus.priorbank.ui.pages;
+package by.plus.priorbank.ui.pages.login;
 
 public class LoginXpath {
     public static final String INPUT_EMAIL_XPATH = "//input[@name='user[email]']";

@@ -1,4 +1,4 @@
-package by.plus.priorbank.ui.pages;
+package by.plus.priorbank.ui.pages.search;
 
 public class SearchXpath {
     public static final String HEADER_TAG_NAME = "h2";

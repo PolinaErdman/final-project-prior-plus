@@ -2,7 +2,7 @@ package by.plus.priorbank.utils;
 
 import com.github.javafaker.Faker;
 
-public class Utils {
+public class User {
     public static String EMPTY_VALUE = "";
 
     public static String getEmail(){

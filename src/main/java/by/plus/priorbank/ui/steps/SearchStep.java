@@ -1,7 +1,8 @@
 package by.plus.priorbank.ui.steps;
 
-import by.plus.priorbank.ui.pages.LoginPage;
-import by.plus.priorbank.ui.pages.SearchPage;
+import by.plus.priorbank.ui.pages.login.LoginPage;
+import by.plus.priorbank.ui.pages.search.SearchPage;
+import java.util.List;
 
 public class SearchStep {
     public void openCataloguePage() {
@@ -13,5 +14,13 @@ public class SearchStep {
         SearchPage searchPage = new SearchPage();
         searchPage.setProductName(productName);
         searchPage.clickSearchButton();
+    }
+
+    public boolean isAllProductContainsExpectedName(List<String> productsNameActual, String expectedName) {
+        for (String string : productsNameActual) {
+            if (!string.contains(expectedName))
+                return false;
+        }
+        return true;
     }
 }

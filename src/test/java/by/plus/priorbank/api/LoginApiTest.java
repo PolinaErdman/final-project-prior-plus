@@ -1,6 +1,6 @@
 package by.plus.priorbank.api;
 
-import by.plus.priorbank.utils.Utils;
+import by.plus.priorbank.utils.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
@@ -11,12 +11,12 @@ public class LoginApiTest extends BaseTest{
     @Test
     @DisplayName("Авторизация c невалидными данными")
     public void authorizationWithInvalidLoginTest() {
-        String login = Utils.getEmail();
-        String password = Utils.getPassword();
+        String login = User.getEmail();
+        String password = User.getPassword();
 
         given()
-                .spec(by.plus.priorbank.api.UserLoginApiRequest.requestSpecification)
-                .body(by.plus.priorbank.api.UserLoginApiRequest.getBody(login, password))
+                .spec(UserLoginApiRequest.requestSpecification)
+                .body(UserLoginApiRequest.getBody(login, password))
                 .when()
                 .log().all()
                 .post()
@@ -29,12 +29,12 @@ public class LoginApiTest extends BaseTest{
     @Test
     @DisplayName("Авторизация c пустым email и password")
     public void authorizationWithEmptyEmailAndPasswordTest() {
-        String login = Utils.EMPTY_VALUE;
-        String password = Utils.EMPTY_VALUE;
+        String login = User.EMPTY_VALUE;
+        String password = User.EMPTY_VALUE;
 
         given()
-                .spec(by.plus.priorbank.api.UserLoginApiRequest.requestSpecification)
-                .body(by.plus.priorbank.api.UserLoginApiRequest.getBody(login, password))
+                .spec(UserLoginApiRequest.requestSpecification)
+                .body(UserLoginApiRequest.getBody(login, password))
                 .when()
                 .log().all()
                 .post()
@@ -49,12 +49,12 @@ public class LoginApiTest extends BaseTest{
     @Test
     @DisplayName("Авторизация c пустым email")
     public void authorizationWithEmptyEmailTest() {
-        String login = Utils.EMPTY_VALUE;
-        String password = Utils.getPassword();
+        String login = User.EMPTY_VALUE;
+        String password = User.getPassword();
 
         given()
-                .spec(by.plus.priorbank.api.UserLoginApiRequest.requestSpecification)
-                .body(by.plus.priorbank.api.UserLoginApiRequest.getBody(login, password))
+                .spec(UserLoginApiRequest.requestSpecification)
+                .body(UserLoginApiRequest.getBody(login, password))
                 .when()
                 .log().all()
                 .post()
@@ -68,12 +68,12 @@ public class LoginApiTest extends BaseTest{
     @Test
     @DisplayName("Авторизация c пустым password")
     public void authorizationWithEmptyPasswordTest() {
-        String login = Utils.getEmail();
-        String password = Utils.EMPTY_VALUE;
+        String login = User.getEmail();
+        String password = User.EMPTY_VALUE;
 
         given()
-                .spec(by.plus.priorbank.api.UserLoginApiRequest.requestSpecification)
-                .body(by.plus.priorbank.api.UserLoginApiRequest.getBody(login, password))
+                .spec(UserLoginApiRequest.requestSpecification)
+                .body(UserLoginApiRequest.getBody(login, password))
                 .when()
                 .log().all()
                 .post()

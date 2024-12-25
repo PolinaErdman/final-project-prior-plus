@@ -7,11 +7,14 @@ import java.time.Duration;
 public class Driver {
     private static WebDriver driver;
 
+    private Driver() {
+    }
+
     public static WebDriver getDriver() {
         if (driver == null) {
             driver = new ChromeDriver();
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         driver.manage().window().maximize();
         return driver;
     }

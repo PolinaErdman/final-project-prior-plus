@@ -6,6 +6,6 @@ public class BaseTest {
 
     @BeforeEach
     void setUp() {
-        by.plus.priorbank.api.UserLoginApiRequest.initRequestSpecification();
+        UserLoginApiRequest.initRequestSpecification();
     }
 }

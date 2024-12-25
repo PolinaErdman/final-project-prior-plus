@@ -1,4 +1,4 @@
-package by.plus.priorbank.ui.pages;
+package by.plus.priorbank.ui.pages.login;
 
 import by.plus.priorbank.ui.driver.Driver;
 import org.apache.logging.log4j.LogManager;
